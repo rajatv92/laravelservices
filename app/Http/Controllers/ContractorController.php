@@ -10,6 +10,7 @@ class ContractorController extends Controller
         $contractorList['name'] = 'Rajat Verma';
         $contractorList['profile'] = 'Laravel Developer';
         $contractorList['organisation'] = 'Vinove Overseas';
+        $contractorList['organisation1'] = 'Hytech Professionals';
         
         dd(json_encode($contractorList));
     }
