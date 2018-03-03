@@ -17,6 +17,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      *
      * @var array
      */
+    protected $table = 'eb_users';
     protected $fillable = [
         'name', 'email',
     ];
@@ -29,4 +30,8 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     protected $hidden = [
         'password',
     ];
+    
+    public function userProfile(){
+       return $this->hasOne('App\UserProfile');
+    }
 }
