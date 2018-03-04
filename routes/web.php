@@ -18,4 +18,5 @@ $app->get('/', function () use ($app) {
 $app->get('/contractorList', [
     'as' => 'list', 'uses' => 'ContractorController@ContractorList'
 ]);        
-        
+      
+$app->get('/userList', ['uses' => 'ContractorController@UserList']); 

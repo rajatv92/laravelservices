@@ -99,4 +99,6 @@ $app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
 
 $app->withEloquent();
 
+$app->withFacades();
+
 return $app;
