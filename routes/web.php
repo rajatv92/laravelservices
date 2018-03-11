@@ -19,4 +19,10 @@ $app->get('/contractorList', [
     'as' => 'list', 'uses' => 'ContractorController@ContractorList'
 ]);        
       
-$app->get('/userList', ['uses' => 'ContractorController@UserList']); 
+$app->get('/userList/{params}', ['uses' => 'ContractorController@UserList']); 
+
+$app->post('/organiseElection', ['uses' => 'ContractorController@organiseElection']); 
+
+$app->post('/doVoting', ['uses' => 'ContractorController@doVoting']);
+
+$app->get('/declareResult', ['uses' => 'ContractorController@declareResult']);
