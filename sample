@@ -1,0 +1,44 @@
+public function practiceCode()
+    {
+    	$employeeData = array();
+    	for($i = 0; $i < 10; $i++)
+    	{
+           $data['id'] = $i;
+    	   $data['name'] = "Rajat Verma";
+    	   $data['Employee_id'] = 'E101';
+    	   $employeeData[] = $data;
+    	}
+        
+        $userData = array();
+    	foreach($employeeData as $employee)
+    	{
+    		$user['id']   = $employee['id'];
+    		$user['employee']['name'] = $employee['name'];
+    		$user['employee']['id'] = $employee['Employee_id'];
+    		$userData[] = $user;
+    	}
+    	//dd($userData);
+         
+        $newUsers = array();
+        $technologies = array(0 => 'PHP',1 => 'Python',2 => 'Angular');
+    	foreach($userData as $user)
+    	{
+            $newUser['id'] = $user['id'];
+            $newUser['name'] = $user['employee']['name'];
+            $newUser['employee_id'] = $user['employee']['id'];
+            
+            foreach($technologies as $key => $value)
+            {
+               $tech['id'] = $key;
+               $tech['techno_name'] = $value;
+               $userTech[] = $tech;
+            } 	
+
+            $newUser['technology'][$user['employee']['id']]['id'] = $userTech;
+            
+            $newUsers[] = $newUser;
+            unset(userTech);
+    	}
+
+    	dd($newUsers);
+    }
