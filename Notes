@@ -1,0 +1,3 @@
+Command to export database :- 
+
+mysqldump -u root -p felixdev > /var/www/html/felix1.sql
