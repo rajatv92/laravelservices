@@ -1,0 +1,7 @@
+Export database
+--------------------
+mysqldump -u root -p felixdev > /var/www/html/felix1.sql
+
+Import Dtabase
+--------------------
+mysql -u username -p database_name < file.sql
